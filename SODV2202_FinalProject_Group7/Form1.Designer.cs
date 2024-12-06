@@ -28,12 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            homePage = new Home();
+            howToPlayPage = new HowToPlay();
+            leaderBoardPage = new LeaderBoard();
+            setupPage = new Setup();
+            gamePage = new Game();
+            SuspendLayout();
+            // 
+            // homePage
+            // 
+            homePage.Location = new Point(0, 0);
+            homePage.Name = "homePage";
+            homePage.Size = new Size(1280, 850);
+            homePage.TabIndex = 0;
+            // 
+            // howToPlayPage
+            // 
+            howToPlayPage.Location = new Point(0, 0);
+            howToPlayPage.Name = "howToPlayPage";
+            howToPlayPage.Size = new Size(1280, 850);
+            howToPlayPage.TabIndex = 2;
+            // 
+            // leaderBoardPage
+            // 
+            leaderBoardPage.Location = new Point(0, 0);
+            leaderBoardPage.Name = "leaderBoardPage";
+            leaderBoardPage.Size = new Size(1280, 850);
+            leaderBoardPage.TabIndex = 3;
+            // 
+            // setupPage
+            // 
+            setupPage.BackColor = Color.DarkBlue;
+            setupPage.Location = new Point(0, 0);
+            setupPage.Name = "setupPage";
+            setupPage.NumberOfPlayer = 0;
+            setupPage.players = null;
+            setupPage.Size = new Size(1280, 850);
+            setupPage.TabIndex = 4;
+            // 
+            // gamePage
+            // 
+            gamePage.BackColor = Color.LightSteelBlue;
+            gamePage.Location = new Point(0, 0);
+            gamePage.Name = "gamePage";
+            gamePage.players = null;
+            gamePage.Size = new Size(1280, 850);
+            gamePage.TabIndex = 5;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1258, 794);
+            Controls.Add(gamePage);
+            Controls.Add(setupPage);
+            Controls.Add(leaderBoardPage);
+            Controls.Add(howToPlayPage);
+            Controls.Add(homePage);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Get Bit";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Home homePage;
+        private Game gamePage;
+        private HowToPlay howToPlayPage;
+        private LeaderBoard leaderBoardPage;
+        private Setup setupPage;
     }
 }
