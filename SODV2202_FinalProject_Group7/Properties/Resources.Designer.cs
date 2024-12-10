@@ -153,6 +153,46 @@ namespace SODV2202_FinalProject_Group7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_12_10_141828 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-12-10 141828", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_12_10_141836 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-12-10 141836", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_12_10_141842 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-12-10 141842", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_12_10_141847 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-12-10 141847", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shark {
             get {
                 object obj = ResourceManager.GetObject("shark", resourceCulture);

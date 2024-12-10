@@ -39,9 +39,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(562, 357);
+            label1.Location = new Point(731, 457);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(113, 25);
+            label1.Size = new Size(149, 32);
             label1.TabIndex = 0;
             label1.Text = "leader board";
             // 
@@ -52,9 +53,10 @@
             btnRestart.FlatStyle = FlatStyle.Flat;
             btnRestart.ForeColor = SystemColors.Menu;
             btnRestart.Image = Properties.Resources.home;
-            btnRestart.Location = new Point(1040, 33);
+            btnRestart.Location = new Point(1352, 42);
+            btnRestart.Margin = new Padding(4, 4, 4, 4);
             btnRestart.Name = "btnRestart";
-            btnRestart.Size = new Size(169, 55);
+            btnRestart.Size = new Size(220, 70);
             btnRestart.TabIndex = 21;
             btnRestart.Text = "Restart Game";
             btnRestart.TextAlign = ContentAlignment.MiddleRight;
@@ -66,9 +68,10 @@
             // 
             pictureBox1.BackColor = Color.DarkBlue;
             pictureBox1.Image = Properties.Resources.shark;
-            pictureBox1.Location = new Point(23, 28);
+            pictureBox1.Location = new Point(30, 36);
+            pictureBox1.Margin = new Padding(4, 4, 4, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(60, 60);
+            pictureBox1.Size = new Size(78, 77);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 20;
             pictureBox1.TabStop = false;
@@ -79,10 +82,11 @@
             label2.BackColor = Color.DarkBlue;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(89, 42);
+            label2.Location = new Point(116, 54);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.RightToLeft = RightToLeft.No;
-            label2.Size = new Size(97, 32);
+            label2.Size = new Size(129, 45);
             label2.TabIndex = 18;
             label2.Text = "Get Bit!";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -92,21 +96,24 @@
             label4.BackColor = Color.DarkBlue;
             label4.Dock = DockStyle.Top;
             label4.Location = new Point(0, 0);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(1280, 118);
+            label4.Size = new Size(1664, 151);
             label4.TabIndex = 19;
             // 
             // LeaderBoard
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnRestart);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(label4);
             Controls.Add(label1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "LeaderBoard";
-            Size = new Size(1280, 850);
+            Size = new Size(1664, 1088);
+            Load += LeaderBoard_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

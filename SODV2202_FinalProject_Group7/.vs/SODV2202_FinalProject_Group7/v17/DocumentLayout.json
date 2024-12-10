@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\16043\\source\\repos\\SODV2202_FinalProject_Group7\\SODV2202_FinalProject_Group7\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B18EAAF-A303-486A-B6CA-25FD6E12DA0E}|SODV2202_FinalProject_Group7.csproj|c:\\users\\16043\\source\\repos\\sodv2202_finalproject_group7\\sodv2202_finalproject_group7\\leaderboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B18EAAF-A303-486A-B6CA-25FD6E12DA0E}|SODV2202_FinalProject_Group7.csproj|solutionrelative:leaderboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LeaderBoard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\16043\\source\\repos\\SODV2202_FinalProject_Group7\\SODV2202_FinalProject_Group7\\LeaderBoard.cs",
+              "RelativeDocumentMoniker": "LeaderBoard.cs",
+              "ToolTip": "C:\\Users\\16043\\source\\repos\\SODV2202_FinalProject_Group7\\SODV2202_FinalProject_Group7\\LeaderBoard.cs [Design]",
+              "RelativeToolTip": "LeaderBoard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T22:11:05.147Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
