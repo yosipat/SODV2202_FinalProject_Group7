@@ -1,4 +1,4 @@
-﻿namespace SODV2202_FinalProject_Group7
+namespace SODV2202_FinalProject_Group7
 {
     partial class LeaderBoard
     {
@@ -28,23 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            components = new System.ComponentModel.Container();
+            lblTitle = new Label();
             btnRestart = new Button();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             label4 = new Label();
+            playerBindingSource = new BindingSource(components);
+            lstRankings = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)playerBindingSource).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblTitle
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(731, 457);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(149, 32);
-            label1.TabIndex = 0;
-            label1.Text = "leader board";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI Semibold", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = SystemColors.Menu;
+            lblTitle.Location = new Point(701, 191);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(234, 50);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Leaderboard";
             // 
             // btnRestart
             // 
@@ -54,7 +60,7 @@
             btnRestart.ForeColor = SystemColors.Menu;
             btnRestart.Image = Properties.Resources.home;
             btnRestart.Location = new Point(1352, 42);
-            btnRestart.Margin = new Padding(4, 4, 4, 4);
+            btnRestart.Margin = new Padding(4);
             btnRestart.Name = "btnRestart";
             btnRestart.Size = new Size(220, 70);
             btnRestart.TabIndex = 21;
@@ -69,7 +75,7 @@
             pictureBox1.BackColor = Color.DarkBlue;
             pictureBox1.Image = Properties.Resources.shark;
             pictureBox1.Location = new Point(30, 36);
-            pictureBox1.Margin = new Padding(4, 4, 4, 4);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(78, 77);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -101,30 +107,51 @@
             label4.Size = new Size(1664, 151);
             label4.TabIndex = 19;
             // 
+            // playerBindingSource
+            // 
+            playerBindingSource.DataSource = typeof(Player);
+            // 
+            // lstRankings
+            // 
+            lstRankings.BackColor = Color.DodgerBlue;
+            lstRankings.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lstRankings.ForeColor = SystemColors.Menu;
+            lstRankings.FormattingEnabled = true;
+            lstRankings.ItemHeight = 45;
+            lstRankings.Location = new Point(116, 333);
+            lstRankings.Name = "lstRankings";
+            lstRankings.Size = new Size(1425, 589);
+            lstRankings.TabIndex = 22;
+            // 
             // LeaderBoard
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkBlue;
+            Controls.Add(lstRankings);
             Controls.Add(btnRestart);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(label4);
-            Controls.Add(label1);
-            Margin = new Padding(4, 4, 4, 4);
+            Controls.Add(lblTitle);
+            Margin = new Padding(4);
             Name = "LeaderBoard";
             Size = new Size(1664, 1088);
             Load += LeaderBoard_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)playerBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private Label lblTitle;
         private Button btnRestart;
         private PictureBox pictureBox1;
         private Label label2;
         private Label label4;
+        private BindingSource playerBindingSource;
+        private ListBox lstRankings;
     }
 }
