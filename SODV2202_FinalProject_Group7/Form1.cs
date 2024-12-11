@@ -65,6 +65,7 @@ namespace SODV2202_FinalProject_Group7
         public void leaderBoardPagerun(object sender, EventArgs e)
         {
             leaderBoardPage.Rank = gamePage.Rank; // get rank from game page
+            leaderBoardPage.ShowRankings();
             leaderBoardPage.Show();
 
             homePage.Visible = false;
