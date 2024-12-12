@@ -13,5 +13,6 @@ namespace SODV2202_FinalProject_Group7
         public bool Eliminated { get; set; }
         public List<int> Cards { get; set; }    
         public int PickCard {  get; set; }
+         public Image imageList1 { get; set; }
     }
 }
