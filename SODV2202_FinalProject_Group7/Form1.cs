@@ -62,12 +62,16 @@ namespace SODV2202_FinalProject_Group7
             leaderBoardPage.Visible = false;
         }
 
+
         public void leaderBoardPagerun(object sender, EventArgs e)
         {
-            leaderBoardPage.Rank = gamePage.Rank; // get rank from game page
-            leaderBoardPage.ShowRankings();
-            leaderBoardPage.Show();
+            // Copy the Rank list from the gamePage
+            leaderBoardPage.Rank = new List<string>(gamePage.Rank);
 
+            // Populate the leaderboard
+            leaderBoardPage.ShowRankings();
+
+            // Show the leaderboard page
             homePage.Visible = false;
             setupPage.Visible = false;
             howToPlayPage.Visible = false;
