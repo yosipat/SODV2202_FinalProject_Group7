@@ -1,4 +1,4 @@
-﻿namespace SODV2202_FinalProject_Group7
+namespace SODV2202_FinalProject_Group7
 {
     partial class HowToPlay
     {
@@ -51,16 +51,15 @@
             // 
             // label1
             // 
-            label1.BackColor = Color.MidnightBlue;
-            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.BackColor = Color.DarkBlue;
             label1.Font = new Font("Segoe UI Semibold", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Menu;
-            label1.Location = new Point(671, 125);
+            label1.Location = new Point(576, 125);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(297, 62);
+            label1.Size = new Size(468, 62);
             label1.TabIndex = 0;
-            label1.Text = "HOW TO PLAY";
+            label1.Text = "HOW MANY PLAYERS PAGE";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.Click += label1_Click;
             // 
