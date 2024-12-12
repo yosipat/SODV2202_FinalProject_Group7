@@ -29,15 +29,16 @@ namespace SODV2202_FinalProject_Group7
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LeaderBoard));
             lblTitle = new Label();
             btnRestart = new Button();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             label4 = new Label();
-            playerBindingSource = new BindingSource(components);
-            lstRankings = new ListBox();
+            lstRankings = new ListView();
+            columnHeader1 = new ColumnHeader();
+            imageList1 = new ImageList(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)playerBindingSource).BeginInit();
             SuspendLayout();
             // 
             // lblTitle
@@ -45,12 +46,11 @@ namespace SODV2202_FinalProject_Group7
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI Semibold", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = SystemColors.Menu;
-            lblTitle.Location = new Point(701, 191);
+            lblTitle.Location = new Point(743, 168);
             lblTitle.Margin = new Padding(4, 0, 4, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(234, 50);
+            lblTitle.Size = new Size(0, 50);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "Leaderboard";
             // 
             // btnRestart
             // 
@@ -107,21 +107,40 @@ namespace SODV2202_FinalProject_Group7
             label4.Size = new Size(1664, 151);
             label4.TabIndex = 19;
             // 
-            // playerBindingSource
-            // 
-            playerBindingSource.DataSource = typeof(Player);
-            // 
             // lstRankings
             // 
-            lstRankings.BackColor = Color.DodgerBlue;
-            lstRankings.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lstRankings.ForeColor = SystemColors.Menu;
-            lstRankings.FormattingEnabled = true;
-            lstRankings.ItemHeight = 45;
-            lstRankings.Location = new Point(116, 333);
+            lstRankings.Alignment = ListViewAlignment.Default;
+            lstRankings.BackColor = Color.LightSteelBlue;
+            lstRankings.BorderStyle = BorderStyle.None;
+            lstRankings.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
+            lstRankings.Font = new Font("Segoe UI Semibold", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lstRankings.ForeColor = SystemColors.ActiveCaptionText;
+            lstRankings.Location = new Point(204, 203);
             lstRankings.Name = "lstRankings";
-            lstRankings.Size = new Size(1425, 589);
+            lstRankings.Scrollable = false;
+            lstRankings.Size = new Size(1243, 787);
+            lstRankings.SmallImageList = imageList1;
             lstRankings.TabIndex = 22;
+            lstRankings.UseCompatibleStateImageBehavior = false;
+            lstRankings.View = View.Details;
+            lstRankings.SelectedIndexChanged += lstRankings_SelectedIndexChanged;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "LEADERBOARD";
+            columnHeader1.Width = 1000;
+            // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Transparent;
+            imageList1.Images.SetKeyName(0, "dive1.png");
+            imageList1.Images.SetKeyName(1, "dive2.png");
+            imageList1.Images.SetKeyName(2, "dive3.png");
+            imageList1.Images.SetKeyName(3, "dive4.png");
+            imageList1.Images.SetKeyName(4, "dive5.png");
+            imageList1.Images.SetKeyName(5, "dive6.png");
             // 
             // LeaderBoard
             // 
@@ -139,7 +158,6 @@ namespace SODV2202_FinalProject_Group7
             Size = new Size(1664, 1088);
             Load += LeaderBoard_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)playerBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -151,7 +169,8 @@ namespace SODV2202_FinalProject_Group7
         private PictureBox pictureBox1;
         private Label label2;
         private Label label4;
-        private BindingSource playerBindingSource;
-        private ListBox lstRankings;
+        private ListView lstRankings;
+        private ImageList imageList1;
+        private ColumnHeader columnHeader1;
     }
 }
