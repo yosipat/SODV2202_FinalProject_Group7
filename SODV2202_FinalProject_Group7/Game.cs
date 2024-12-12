@@ -123,71 +123,87 @@ namespace SODV2202_FinalProject_Group7
         }
 
         private void SharkAction()
-        {
-            var board = gamePlay.Players.OrderBy(p => p.PickCard).Select(p => new { p.Name, p.PickCard }).ToList();
-            List<Player> orderBoard = gamePlay.Players.OrderBy(p => p.PickCard).ToList();
+ {
+     var board = gamePlay.Players.OrderBy(p => p.PickCard).ToList();
+     List<Player> orderBoard = gamePlay.Players.OrderBy(p => p.PickCard).ToList();
 
-            if (gamePlay.Round == 0)
-            {
-                gamePlay.Board.Clear();
-                foreach (Player p in orderBoard)
-                {
-                    gamePlay.Board.Add(p);
-                }
+     if (gamePlay.Round == 0)
+     {
+         gamePlay.Board.Clear();
+         foreach (Player p in orderBoard)
+         {
+             gamePlay.Board.Add(p);
+         }
 
-                MessageBox.Show("Positions were arranged.");
-            }
-            else
-            {
-                var result = new List<Player>(gamePlay.Board);
+         MessageBox.Show("Positions were arranged.");
+     }
+     else
+     {
+         var result = new List<Player>(gamePlay.Board);
 
-                foreach (Player p in orderBoard)
-                {
-                    int value = p.PickCard;
-                    Player key = p;
+         foreach (Player p in orderBoard)
+         {
+             int value = p.PickCard;
+             Player key = p;
 
-                    var n = orderBoard.Where(x => x.PickCard == value).Count();
-                    if (n > 1)
-                    {
-                    }
-                    else
-                    {
-                        result.Remove(p);
-                        result.Add(p);
-                    }
-                }
-                gamePlay.Board = result;
+             var n = orderBoard.Where(x => x.PickCard == value).Count();
+             if (n > 1)
+             {
+                 // Tie logic here (optional)
+             }
+             else
+             {
+                 result.Remove(p);
+                 result.Add(p);
+             }
+         }
+         gamePlay.Board = result;
 
-                Player playerLose = gamePlay.Board.First();
-                playerLose.Lives--;
+         Player playerLose = gamePlay.Board.First();
+         playerLose.Lives--;
 
-                if (playerLose.Lives == 0 || gamePlay.Players.Count == 2)
-                {
-                    gamePlay.Players.Remove(playerLose);
-                    gamePlay.Eliminated.Add(playerLose);
-                    gamePlay.Board.Remove(playerLose);
+         if (playerLose.Lives == 0)
+         {
+             gamePlay.Players.Remove(playerLose);
+             gamePlay.Eliminated.Add(playerLose);
+             gamePlay.Board.Remove(playerLose);
 
-                    Rank.Add(playerLose.Name);
-                }
+             Rank.Add(playerLose.Name); // Add eliminated player to the rank
 
-                MessageBox.Show(playerLose.Name + " get bit.");
+             // Debugging: Print the Rank list to the console
+             Console.WriteLine("Current Rank List:");
+             foreach (var playerName in Rank)
+             {
+                 Console.WriteLine(playerName);
+             }
+         }
 
-            }
+         MessageBox.Show(playerLose.Name + " got bitten.");
+     }
 
-            if (gamePlay.Players.Count() == 1)
-            {
-                Rank.Add(gamePlay.Players[0].Name);
-                gameEnd();
-            }
-            else
-            {
-                ShowBoard();
-                gamePlay.Round++;
-                currentPlayerIndex = 0;
-                gameTurn();
-            }
+     // Check if the game has ended
+     if (gamePlay.Players.Count == 1)
+     {
+         Rank.Add(gamePlay.Players[0].Name); // Add the last surviving player
 
-        }
+         // Debugging: Print the final Rank list
+         Console.WriteLine("Final Rank List:");
+         foreach (var playerName in Rank)
+         {
+             Console.WriteLine(playerName);
+         }
+
+         gameEnd(); // Trigger the end of the game
+     }
+     else
+     {
+         ShowBoard();
+         gamePlay.Round++;
+         currentPlayerIndex = 0;
+         gameTurn();
+     }
+ }
+
 
         private void ShowBoard()
         {
