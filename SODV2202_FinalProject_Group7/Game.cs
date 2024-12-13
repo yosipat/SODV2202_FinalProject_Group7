@@ -221,7 +221,6 @@ namespace SODV2202_FinalProject_Group7
 
         public void gameEnd()
         {
-            MessageBox.Show("Game over!");
             gameEnded.Invoke(this, EventArgs.Empty);
         }
 

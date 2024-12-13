@@ -138,7 +138,6 @@ namespace SODV2202_FinalProject_Group7
             Controls.Add(lblTitle);
             Name = "LeaderBoard";
             Size = new Size(1280, 850);
-            Load += LeaderBoard_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

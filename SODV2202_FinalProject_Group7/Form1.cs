@@ -21,6 +21,7 @@ namespace SODV2202_FinalProject_Group7
 
         public void homePagerun(object sender, EventArgs e)
         {
+            gamePage.Rank.Clear();
             homePage.Visible = true;
             setupPage.Visible = false;
             howToPlayPage.Visible = false;  
