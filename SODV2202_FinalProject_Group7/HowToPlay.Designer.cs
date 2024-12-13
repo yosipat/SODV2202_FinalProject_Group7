@@ -52,14 +52,13 @@ namespace SODV2202_FinalProject_Group7
             // label1
             // 
             label1.BackColor = Color.DarkBlue;
-            label1.Font = new Font("Segoe UI Semibold", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
             label1.ForeColor = SystemColors.Menu;
-            label1.Location = new Point(576, 125);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(451, 102);
             label1.Name = "label1";
-            label1.Size = new Size(468, 62);
+            label1.Size = new Size(360, 48);
             label1.TabIndex = 0;
-            label1.Text = "HOW MANY PLAYERS PAGE";
+            label1.Text = "How to Play";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.Click += label1_Click;
             // 
@@ -69,10 +68,9 @@ namespace SODV2202_FinalProject_Group7
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.ForeColor = SystemColors.Menu;
             btnBack.Image = Properties.Resources.back;
-            btnBack.Location = new Point(93, 931);
-            btnBack.Margin = new Padding(4);
+            btnBack.Location = new Point(72, 694);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(220, 70);
+            btnBack.Size = new Size(169, 55);
             btnBack.TabIndex = 17;
             btnBack.Text = "Back";
             btnBack.TextAlign = ContentAlignment.MiddleRight;
@@ -84,10 +82,9 @@ namespace SODV2202_FinalProject_Group7
             // 
             pictureBox1.BackColor = Color.DarkBlue;
             pictureBox1.Image = Properties.Resources.shark;
-            pictureBox1.Location = new Point(30, 36);
-            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Location = new Point(23, 28);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(78, 77);
+            pictureBox1.Size = new Size(60, 60);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
@@ -98,11 +95,10 @@ namespace SODV2202_FinalProject_Group7
             label2.BackColor = Color.DarkBlue;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(116, 54);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(89, 42);
             label2.Name = "label2";
             label2.RightToLeft = RightToLeft.No;
-            label2.Size = new Size(129, 45);
+            label2.Size = new Size(97, 32);
             label2.TabIndex = 14;
             label2.Text = "Get Bit!";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -113,9 +109,8 @@ namespace SODV2202_FinalProject_Group7
             label4.BackColor = Color.DarkBlue;
             label4.Dock = DockStyle.Top;
             label4.Location = new Point(0, 0);
-            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(1664, 125);
+            label4.Size = new Size(1280, 98);
             label4.TabIndex = 15;
             // 
             // btnGo
@@ -124,10 +119,9 @@ namespace SODV2202_FinalProject_Group7
             btnGo.FlatStyle = FlatStyle.Flat;
             btnGo.ForeColor = SystemColors.Menu;
             btnGo.Image = Properties.Resources.go;
-            btnGo.Location = new Point(1326, 931);
-            btnGo.Margin = new Padding(4);
+            btnGo.Location = new Point(1020, 694);
             btnGo.Name = "btnGo";
-            btnGo.Size = new Size(220, 70);
+            btnGo.Size = new Size(169, 55);
             btnGo.TabIndex = 18;
             btnGo.Text = "Let's Go";
             btnGo.TextAlign = ContentAlignment.MiddleRight;
@@ -140,9 +134,10 @@ namespace SODV2202_FinalProject_Group7
             pictureBox2.BorderStyle = BorderStyle.Fixed3D;
             pictureBox2.ErrorImage = Properties.Resources.Screenshot_2024_12_10_141828;
             pictureBox2.Image = Properties.Resources.Screenshot_2024_12_10_141828;
-            pictureBox2.Location = new Point(116, 278);
+            pictureBox2.Location = new Point(89, 217);
+            pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(172, 171);
+            pictureBox2.Size = new Size(133, 134);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 19;
             pictureBox2.TabStop = false;
@@ -151,9 +146,10 @@ namespace SODV2202_FinalProject_Group7
             // 
             pictureBox3.BorderStyle = BorderStyle.Fixed3D;
             pictureBox3.Image = Properties.Resources.Screenshot_2024_12_10_141847;
-            pictureBox3.Location = new Point(824, 571);
+            pictureBox3.Location = new Point(634, 446);
+            pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(174, 171);
+            pictureBox3.Size = new Size(135, 134);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 20;
             pictureBox3.TabStop = false;
@@ -162,9 +158,10 @@ namespace SODV2202_FinalProject_Group7
             // 
             pictureBox4.BorderStyle = BorderStyle.Fixed3D;
             pictureBox4.Image = Properties.Resources.Screenshot_2024_12_10_141842;
-            pictureBox4.Location = new Point(116, 571);
+            pictureBox4.Location = new Point(89, 446);
+            pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(172, 171);
+            pictureBox4.Size = new Size(133, 134);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 21;
             pictureBox4.TabStop = false;
@@ -173,9 +170,10 @@ namespace SODV2202_FinalProject_Group7
             // 
             pictureBox5.BorderStyle = BorderStyle.Fixed3D;
             pictureBox5.Image = Properties.Resources.Screenshot_2024_12_10_141836;
-            pictureBox5.Location = new Point(824, 278);
+            pictureBox5.Location = new Point(634, 217);
+            pictureBox5.Margin = new Padding(2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(174, 156);
+            pictureBox5.Size = new Size(135, 123);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 22;
             pictureBox5.TabStop = false;
@@ -183,9 +181,10 @@ namespace SODV2202_FinalProject_Group7
             // label3
             // 
             label3.ForeColor = SystemColors.Menu;
-            label3.Location = new Point(362, 290);
+            label3.Location = new Point(278, 227);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(369, 126);
+            label3.Size = new Size(284, 98);
             label3.TabIndex = 23;
             label3.Text = "SETUP PLAYERS\r\nChoose the number of players.\r\nEach player starts with 4 lives";
             label3.Click += label3_Click;
@@ -193,9 +192,10 @@ namespace SODV2202_FinalProject_Group7
             // label5
             // 
             label5.ForeColor = SystemColors.Menu;
-            label5.Location = new Point(1090, 290);
+            label5.Location = new Point(838, 227);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(423, 134);
+            label5.Size = new Size(325, 105);
             label5.TabIndex = 24;
             label5.Text = "CHOOSE CARDS\r\nPlayers pick a card (1-7) each round.\r\nLower numbers move robots closer to the front of the line.";
             label5.Click += label5_Click;
@@ -203,25 +203,27 @@ namespace SODV2202_FinalProject_Group7
             // label6
             // 
             label6.ForeColor = SystemColors.Menu;
-            label6.Location = new Point(362, 571);
+            label6.Location = new Point(278, 446);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(369, 182);
+            label6.Size = new Size(284, 142);
             label6.TabIndex = 25;
             label6.Text = "SHARK ATTACK\r\nThe robot at the back of the line loses a life when bitten by the shark.\r\nEliminated robots are removed from the game.";
             // 
             // label7
             // 
             label7.ForeColor = SystemColors.Menu;
-            label7.Location = new Point(1090, 571);
+            label7.Location = new Point(838, 446);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(369, 182);
+            label7.Size = new Size(284, 142);
             label7.TabIndex = 26;
             label7.Text = "WIN THE GAME\r\nPlay continues until only one player remains, who is declared the winner.";
             label7.Click += label7_Click;
             // 
             // HowToPlay
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkBlue;
             Controls.Add(label7);
@@ -238,9 +240,8 @@ namespace SODV2202_FinalProject_Group7
             Controls.Add(label2);
             Controls.Add(label4);
             Controls.Add(label1);
-            Margin = new Padding(4);
             Name = "HowToPlay";
-            Size = new Size(1664, 1088);
+            Size = new Size(1280, 850);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
