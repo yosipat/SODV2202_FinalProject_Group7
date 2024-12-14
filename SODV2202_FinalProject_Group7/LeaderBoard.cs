@@ -15,14 +15,14 @@ namespace SODV2202_FinalProject_Group7
     public partial class LeaderBoard : UserControl
     {
         public event EventHandler btnRestartClicked;
-
         public List<string> Rank { get; set; }
 
         Panel panel = new Panel();
         public LeaderBoard()
         {
             InitializeComponent();
-        
+
+            // create panel to display leaderboard
             panel.Location = new System.Drawing.Point(0, 235);
             panel.Name = "Panel1";
             panel.Size = new System.Drawing.Size(1280, 590);
@@ -31,13 +31,14 @@ namespace SODV2202_FinalProject_Group7
 
         private void btnRestart_Click_1(object sender, EventArgs e)
         {
-            Rank.Clear();
+            
+            Rank.Clear();   // clear exist item in Listview of Rank
             Panel myPanel = this.Controls["Panel1"] as Panel;
             foreach (Control c in myPanel.Controls)
             {
                 c.Dispose();
             }
-            myPanel.Controls.Clear();
+            myPanel.Controls.Clear(); // clear all control in panel
 
             btnRestartClicked?.Invoke(this, EventArgs.Empty);
         }
@@ -53,11 +54,8 @@ namespace SODV2202_FinalProject_Group7
             // Reverse the Rank list to display the winner at the top
             var reversedRank = Rank.AsEnumerable().Reverse().ToList();
 
-            // Clear existing items in the ListView
-            //lstRankings.Items.Clear();
-
+            // create image list of player character
             ImageList imgList = new ImageList();
-            // Add images to the imageList1 only once, before the loop starts
             imgList.Images.Clear();  // Clear previous images if needed
             imgList.Images.Add(Image.FromFile(@"img/dive1.png"));
             imgList.Images.Add(Image.FromFile(@"img/dive2.png"));
@@ -67,8 +65,7 @@ namespace SODV2202_FinalProject_Group7
             imgList.Images.Add(Image.FromFile(@"img/dive6.png"));
             imgList.ImageSize = new Size(60, 60);
 
-
-
+            // create image list of rank
             ImageList imgRank = new ImageList();
             imgRank.Images.Clear();
             imgRank.Images.Add(Image.FromFile(@"img/1.png"));
@@ -81,8 +78,7 @@ namespace SODV2202_FinalProject_Group7
 
             foreach (var playerName in reversedRank)
             {
-
-                if (position < 2)
+                if (position < 2) // show rank image only first and second
                 {
                     PictureBox pictureBox = new PictureBox();
                     pictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -93,6 +89,7 @@ namespace SODV2202_FinalProject_Group7
                     panel.Controls.Add(pictureBox);
                 }
 
+                // show image of player
                 PictureBox playerBox = new PictureBox();
                 playerBox.SizeMode = PictureBoxSizeMode.AutoSize;
                 playerBox.Image = imgList.Images[Convert.ToInt32(playerName.Substring(playerName.Length - 1, 1))];
@@ -101,6 +98,7 @@ namespace SODV2202_FinalProject_Group7
 
                 panel.Controls.Add(playerBox);
 
+                // show player's name
                 Label lbPlayer = new Label();
                 lbPlayer.Text = playerName;
                 lbPlayer.Font = new Font("Segoe UI Semibold", 10);
@@ -112,6 +110,7 @@ namespace SODV2202_FinalProject_Group7
 
                 panel.Controls.Add(lbPlayer);
 
+                
                 Label lb = new Label();
                 lb.Size = new Size(1280, 60);
                 lb.Location = new Point(0, (position * 80));

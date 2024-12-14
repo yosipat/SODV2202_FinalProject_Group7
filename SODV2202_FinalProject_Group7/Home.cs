@@ -17,8 +17,6 @@ namespace SODV2202_FinalProject_Group7
         {
             InitializeComponent();
 
-            
-          
         }
 
         private void btnStart_Click(object sender, EventArgs e)

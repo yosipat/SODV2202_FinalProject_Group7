@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SODV2202_FinalProject_Group7")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87497fad6fd49b923fb71d2eedf857693189c0a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cf125ea877601161d51a6a7e802e0868b81af91")]
 [assembly: System.Reflection.AssemblyProductAttribute("SODV2202_FinalProject_Group7")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SODV2202_FinalProject_Group7")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -41,14 +41,13 @@ namespace SODV2202_FinalProject_Group7
             gamePlay.Players = players;
             gamePlay.Round = 0;
             gamePlay.Eliminated = new List<Player>();
-            //gamePlay.PlayerCard = new Dictionary<string,int>();
             gamePlay.Board = new List<Player>();
 
-            Rank.Clear();
+            Rank.Clear(); // clear items in Listview of Rank
 
             foreach (Player p in players)
             {
-                gamePlay.Board.Add(p);
+                gamePlay.Board.Add(p); // add player to game board
             }
 
             ShowBoard(); // show initial board
@@ -90,9 +89,6 @@ namespace SODV2202_FinalProject_Group7
             gamePlay.Players[currentPlayerIndex].PickCard = pickCard; // set number of card which player clicked as current picks
 
 
-
-
-
             // check if all player choose their card.
             if (currentPlayerIndex == gamePlay.Players.Count - 1)
             {
@@ -100,7 +96,7 @@ namespace SODV2202_FinalProject_Group7
             }
             else
             {
-                currentPlayerIndex++;
+                currentPlayerIndex++; // next player turn
                 gameTurn();
             }
 
@@ -124,10 +120,11 @@ namespace SODV2202_FinalProject_Group7
 
         private void SharkAction()
         {
+            // order player by card picking
             var board = gamePlay.Players.OrderBy(p => p.PickCard).Select(p => new { p.Name, p.PickCard }).ToList();
             List<Player> orderBoard = gamePlay.Players.OrderBy(p => p.PickCard).ToList();
 
-            if (gamePlay.Round == 0)
+            if (gamePlay.Round == 0) // round 0 - arrange the player's position and shark can't bite
             {
                 gamePlay.Board.Clear();
                 foreach (Player p in orderBoard)
@@ -146,21 +143,25 @@ namespace SODV2202_FinalProject_Group7
                     int value = p.PickCard;
                     Player key = p;
 
+                    // search for number of player that have the same card number
                     var n = orderBoard.Where(x => x.PickCard == value).Count();
-                    if (n > 1)
+                    if (n > 1) // if player found the same card number with other player
                     {
+                        // do nothing - player will be stay in the same position. 
                     }
                     else
                     {
-                        result.Remove(p);
-                        result.Add(p);
+                        result.Remove(p); // remove player from list
+                        result.Add(p); // add player again to list and player's position will move to the last of list
                     }
                 }
-                gamePlay.Board = result;
+
+                gamePlay.Board = result; // position in game board was changed
 
                 Player playerLose = gamePlay.Board.First();
                 playerLose.Lives--;
 
+                
                 if (playerLose.Lives == 0 || gamePlay.Players.Count == 2)
                 {
                     gamePlay.Players.Remove(playerLose);
@@ -174,14 +175,14 @@ namespace SODV2202_FinalProject_Group7
 
             }
 
-            if (gamePlay.Players.Count() == 1)
+            if (gamePlay.Players.Count() == 1) // if only 1 player remain in the game
             {
                 Rank.Add(gamePlay.Players[0].Name);
                 gameEnd();
             }
             else
             {
-                ShowBoard();
+                ShowBoard(); // update game board
                 gamePlay.Round++;
                 currentPlayerIndex = 0;
                 gameTurn();

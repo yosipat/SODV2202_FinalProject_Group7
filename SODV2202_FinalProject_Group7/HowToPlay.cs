@@ -19,8 +19,6 @@ namespace SODV2202_FinalProject_Group7
             InitializeComponent();
         }
 
-
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             btnBackClicked?.Invoke(this, EventArgs.Empty);
@@ -30,35 +28,6 @@ namespace SODV2202_FinalProject_Group7
         {
             btnGoClicked?.Invoke(this, EventArgs.Empty);
         }
-
-        public void Show()
-        {
-            // your code
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

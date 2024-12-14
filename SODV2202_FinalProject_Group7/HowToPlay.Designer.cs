@@ -60,7 +60,6 @@ namespace SODV2202_FinalProject_Group7
             label1.TabIndex = 0;
             label1.Text = "How to Play";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
             // 
             // btnBack
             // 
@@ -102,7 +101,6 @@ namespace SODV2202_FinalProject_Group7
             label2.TabIndex = 14;
             label2.Text = "Get Bit!";
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.Click += label2_Click;
             // 
             // label4
             // 
@@ -187,7 +185,6 @@ namespace SODV2202_FinalProject_Group7
             label3.Size = new Size(284, 98);
             label3.TabIndex = 23;
             label3.Text = "SETUP PLAYERS\r\nChoose the number of players.\r\nEach player starts with 4 lives";
-            label3.Click += label3_Click;
             // 
             // label5
             // 
@@ -198,7 +195,6 @@ namespace SODV2202_FinalProject_Group7
             label5.Size = new Size(325, 105);
             label5.TabIndex = 24;
             label5.Text = "CHOOSE CARDS\r\nPlayers pick a card (1-7) each round.\r\nLower numbers move robots closer to the front of the line.";
-            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -219,7 +215,6 @@ namespace SODV2202_FinalProject_Group7
             label7.Size = new Size(284, 142);
             label7.TabIndex = 26;
             label7.Text = "WIN THE GAME\r\nPlay continues until only one player remains, who is declared the winner.";
-            label7.Click += label7_Click;
             // 
             // HowToPlay
             // 

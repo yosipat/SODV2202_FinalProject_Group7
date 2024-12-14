@@ -42,7 +42,6 @@ namespace SODV2202_FinalProject_Group7
         {
 
             players = setupPage.players; // get players from setup page
-            howToPlayPage.Show();
 
             homePage.Visible = false;
             setupPage.Visible = false;

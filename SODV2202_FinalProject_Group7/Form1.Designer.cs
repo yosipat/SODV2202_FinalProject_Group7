@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             homePage = new Home();
             howToPlayPage = new HowToPlay();
             leaderBoardPage = new LeaderBoard();
@@ -44,6 +45,7 @@
             // 
             // howToPlayPage
             // 
+            howToPlayPage.BackColor = Color.DarkBlue;
             howToPlayPage.Location = new Point(0, 0);
             howToPlayPage.Name = "howToPlayPage";
             howToPlayPage.Size = new Size(1280, 850);
@@ -51,8 +53,10 @@
             // 
             // leaderBoardPage
             // 
+            leaderBoardPage.BackColor = Color.DarkBlue;
             leaderBoardPage.Location = new Point(0, 0);
             leaderBoardPage.Name = "leaderBoardPage";
+            leaderBoardPage.Rank = null;
             leaderBoardPage.Size = new Size(1280, 850);
             leaderBoardPage.TabIndex = 3;
             // 
@@ -86,6 +90,7 @@
             Controls.Add(howToPlayPage);
             Controls.Add(homePage);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
